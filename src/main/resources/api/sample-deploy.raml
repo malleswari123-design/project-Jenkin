@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: Hello World API
+version: v1
+baseUri: http://localhost:8081/api
+
+/greeting:
+  get:
+    description: Retrieves a simple greeting message.
+    responses:
+      200:
+        body:
+          application/json:
+            type: object
+            properties:
+              message:
+                type: string
+                example: "Hello, world!"
