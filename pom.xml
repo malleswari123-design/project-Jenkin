@@ -72,25 +72,30 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-        <repository>
-            <id>anypoint-exchange-v3</id>
-            <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
-        </repository>
-        <repository>
-            <id>mulesoft-releases</id>
-            <url>https://repository.mulesoft.org/releases/</url>
-        </repository>
-    </repositories>
+<repositories>
+    <repository>
+        <id>mulesoft-releases</id>
+        <name>MuleSoft Releases Repository</name>
+        <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
+    </repository>
+    <repository>
+        <id>anypoint-exchange-v3</id>
+        <name>Anypoint Exchange</name>
+        <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+    </repository>
+    <repository>
+        <id>central</id>
+        <name>Maven Central</name>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>mulesoft-releases</id>
-            <url>https://repository.mulesoft.org/releases/</url>
-        </pluginRepository>
-    </pluginRepositories>
+<pluginRepositories>
+    <pluginRepository>
+        <id>mulesoft-releases</id>
+        <name>MuleSoft Releases Repository</name>
+        <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
+    </pluginRepository>
+</pluginRepositories>
+
 </project>
