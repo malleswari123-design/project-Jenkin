@@ -9,7 +9,7 @@
     <!-- 🔹 Use your Business Group ID as groupId -->
     <groupId>06bca8d8-8e34-4ff3-bcc6-4dbef8db7e9b</groupId>
     <artifactId>jenkin-deploy</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>mule-application</packaging>
 
     <name>jenkin-deploy</name>
