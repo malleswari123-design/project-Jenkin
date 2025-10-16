@@ -30,7 +30,7 @@
 
             <!-- ✅ Correct Mule Maven Plugin for CloudHub 2.0 -->
             <plugin>
-                <groupId>com.mulesoft.mule.tools</groupId>
+                <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>3.9.0</version>
                 <extensions>true</extensions>
