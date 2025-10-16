@@ -19,8 +19,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Mule runtime and plugin versions -->
-        <mule.runtime.version>4.6.2</mule.runtime.version>
-        <mule.maven.plugin.version>3.9.0</mule.maven.plugin.version>
+        <mule.runtime.version>4.9.9</mule.runtime.version>
+        <mule.maven.plugin.version>4.4.0</mule.maven.plugin.version>
 
         <!-- CloudHub 2.0 configuration -->
         <anypoint.env>Sandbox</anypoint.env>
