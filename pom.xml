@@ -6,40 +6,33 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 🔹 Use your Anypoint Business Group ID as groupId -->
     <groupId>06bca8d8-8e34-4ff3-bcc6-4dbef8db7e9b</groupId>
     <artifactId>jenkin-deploy</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
-
     <name>jenkin-deploy</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <app.runtime>4.9.9</app.runtime>
-        <mule.maven.plugin.version>4.4.0</mule.maven.plugin.version>
-
-        <!-- Optional properties -->
         <anypoint.env>Sandbox</anypoint.env>
-        <anypoint.region>us-East-2</anypoint.region>
+        <anypoint.region>us-east-2</anypoint.region>
     </properties>
 
     <build>
         <plugins>
-            <!-- Clean plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.2.0</version>
             </plugin>
 
-            <!-- ✅ Mule Maven Plugin with CloudHub 2.0 deployment configuration -->
+            <!-- ✅ Correct Mule Maven Plugin for CloudHub 2.0 -->
             <plugin>
-                <groupId>org.mule.tools.maven</groupId>
+                <groupId>com.mulesoft.mule.tools</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
-                <version>${mule.maven.plugin.version}</version>
+                <version>3.8.1</version>
                 <extensions>true</extensions>
 
                 <configuration>
@@ -47,7 +40,7 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <applicationName>${project.artifactId}</applicationName>
                         <username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+                        <password>${anypoint.password}</password>
                         <environment>${anypoint.env}</environment>
                         <target>${anypoint.region}</target>
                         <replicas>1</replicas>
@@ -58,7 +51,6 @@
         </plugins>
     </build>
 
-    <!-- ✅ Dependencies -->
     <dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
@@ -80,32 +72,25 @@
         </dependency>
     </dependencies>
 
-    <!-- ✅ Repositories -->
     <repositories>
         <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
             <id>anypoint-exchange-v3</id>
-            <name>Anypoint Exchange</name>
             <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
-            <layout>default</layout>
         </repository>
         <repository>
             <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
             <url>https://repository.mulesoft.org/releases/</url>
-            <layout>default</layout>
         </repository>
     </repositories>
 
     <pluginRepositories>
         <pluginRepository>
             <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <layout>default</layout>
             <url>https://repository.mulesoft.org/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>
